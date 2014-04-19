@@ -1,0 +1,702 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+	<title>The Pirate Bay - The galaxy's most resilient bittorrent site</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="google-site-verification" content="bERYeomIC5eBWlPLupPPYPYGA9GvAUKzFHh3WIw24Xs" />
+	<link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Search The Pirate Bay" />
+	<link rel="stylesheet" type="text/css" href="/static/css-new/pirate6.css"/>
+	<link rel="canonical" href="http://thepiratebay.se/search/daily%20show/0/99/0" />
+	<style type="text/css">
+		.searchBox{
+			margin: 6px;
+			width: 300px;
+			vertical-align: middle;
+			padding: 2px;
+		        background-image:url('/static/img/icon-https.gif');
+        		background-repeat:no-repeat;
+		        background-position: right;
+		}
+
+		.detLink {
+			font-size: 1.2em;
+			font-weight: 400;
+		}
+		.detDesc {
+			color: #4e5456;
+		}
+		.detDesc a:hover {
+			color: #000099;
+			text-decoration: underline;
+		}
+		.sortby {
+			text-align: left;
+			float: left;
+		}
+		.detName {
+			padding-top: 3px;
+			padding-bottom: 2px;
+		}
+		.viewswitch {
+			font-style: normal;
+			float: right;
+			text-align: right;
+			font-weight: normal;
+		}
+	</style>
+	<script src="/static/js/tpb.js" type="text/javascript"></script>
+	<meta name="description" content="Search for and download any torrent from the pirate bay using search query daily show. Direct download via magnet link."/>
+	<meta name="keywords" content="daily show direct download torrent magnet tpb piratebay search"/>
+
+	<script language="javascript" type="text/javascript">if (top.location != self.location) {top.location.replace(self.location);}</script>
+head>
+
+<body>
+	<div id="header">
+
+
+		<div class="ad">
+		 <iframe src="http://cdn2.adexprt.com/exo_na/top.html" width="468" height="60" frameborder="0" scrolling="no"></iframe>
+		</div>
+			<form method="get" id="q" action="/s/">
+			<a href="/" class="img"><img src="/static/img/tpblogo_sm_ny.gif" id="TPBlogo" alt="The Pirate Bay" /></a>
+			<b><a href="/" title="Zoek Torrents">Zoek Torrents</a></b>&nbsp;&nbsp;|&nbsp;
+			<a href="/browse" title="Browse Torrents">Browse Torrents</a>&nbsp;&nbsp;|&nbsp;
+			<a href="/recent" title="Recente Torrent">Recente Torrents</a>&nbsp;&nbsp;|&nbsp;
+			<a href="/tv" title="TV-programma's">TV-programma's</a>&nbsp;&nbsp;|&nbsp;
+			<a href="/music" title="Muziek">Muziek</a>&nbsp;&nbsp;|&nbsp;
+			<a href="/top" title="Top 100">Top 100</a>
+			<br /><input type="search" class="inputbox" title="Pirate zoeken" name="q" placeholder="Search here..." value="daily show" /><input value="Pirate zoeken" type="submit" class="submitbutton" /><br />			<label for="audio" title="Audio"><input id="audio" name="audio" onclick="javascript:rmAll();" type="checkbox"/>Audio</label>
+			<label for="video" title="Video"><input id="video" name="video" onclick="javascript:rmAll();" type="checkbox"/>Video</label>
+			<label for="apps" title="Programma's"><input id="apps" name="apps" onclick="javascript:rmAll();" type="checkbox"/>Programma's</label>
+			<label for="games" title="Games"><input id="games" name="games" onclick="javascript:rmAll();" type="checkbox"/>Games</label>
+			<label for="porn" title="Porno"><input id="porn" name="porn" onclick="javascript:rmAll();" type="checkbox"/>Porno</label>
+			<label for="other" title="Anders"><input id="other" name="other" onclick="javascript:rmAll();" type="checkbox"/>Anders</label>
+
+			<select id="category" name="category" onchange="javascript:setAll();">
+        	        	<option value="0">All</option>
+				<optgroup label="Audio">
+					<option value="101">Muziek</option>
+					<option value="102">Gesproken boeken</option>
+					<option value="103">Geluidsfragmenten</option>
+					<option value="104">FLAC</option>
+					<option value="199">Anders</option>
+				</optgroup>
+				<optgroup label="Video">
+					<option value="201">Films</option>
+					<option value="202">Films DVDR</option>
+					<option value="203">Muziek video's</option>
+					<option value="204">Film clips</option>
+					<option value="205">TV-programma's</option>
+					<option value="206">Handheld</option>
+					<option value="207">HD - Movies</option>
+					<option value="208">HD - TV shows</option>
+					<option value="209">3D</option>
+					<option value="299">Anders</option>
+				</optgroup>
+				<optgroup label="Programma's">
+					<option value="301">Windows</option>
+					<option value="302">Mac</option>
+					<option value="303">UNIX</option>
+					<option value="304">Handheld</option>
+					<option value="305">IOS (iPad/iPhone)</option>
+					<option value="306">Android</option>
+					<option value="399">Andere OS</option>
+				</optgroup>
+				<optgroup label="Games">
+					<option value="401">PC</option>
+					<option value="402">Mac</option>
+					<option value="403">PSx</option>
+					<option value="404">XBOX360</option>
+					<option value="405">Wii</option>
+					<option value="406">Handheld</option>
+					<option value="407">IOS (iPad/iPhone)</option>
+					<option value="408">Android</option>
+					<option value="499">Anders</option>
+				</optgroup>
+				<optgroup label="Porno">
+					<option value="501">Films</option>
+					<option value="502">Films DVDR</option>
+					<option value="503">Foto's</option>
+					<option value="504">Games</option>
+					<option value="505">HD - Movies</option>
+					<option value="506">Film clips</option>
+					<option value="599">Anders</option>
+				</optgroup>
+				<optgroup label="Anders">
+					<option value="601">E-books</option>
+					<option value="602">Strips</option>
+					<option value="603">Foto's</option>
+					<option value="604">Hoezen</option>
+					<option value="605">Physibles</option>
+					<option value="699">Anders</option>
+				</optgroup>
+			</select>
+
+			<input type="hidden" name="page" value="0" />
+			<input type="hidden" name="orderby" value="99" />
+		</form>
+	</div><!-- // div:header -->
+
+	<h2><span>Zoekresultaten: daily show</span>&nbsp;Getoonde resultaten voor 1 naar 30 (ongeveer 1000 gevonden)</h2>
+<div id="SearchResults"><div id="content">
+			<div id="sky-right">
+				 <iframe src="http://cdn1.adexprt.com/exo_na/sky2.html" width="160" height="600" frameborder="0" scrolling="no" style="padding-top: 100px"></iframe>
+			</div>
+	<div id="main-content">
+
+		 <iframe src="http://cdn2.adexprt.com/exo_na/center.html" width="728" height="90" frameborder="0" scrolling="no"></iframe>
+	<table id="searchResult">
+	<thead id="tableHead">
+		<tr class="header">
+			<th><a href="/search/daily%20show/0/13/0" title="Sorteren op Type">Type</a></th>
+			<th><div class="sortby"><a href="/search/daily%20show/0/1/0" title="Sorteren op Naam">Naam</a> (Order by: <a href="/search/daily%20show/0/3/0" title="Sorteren op Geupload">Geupload</a>, <a href="/search/daily%20show/0/5/0" title="Sorteren op Grootte">Grootte</a>, <span style="white-space: nowrap;"><a href="/search/daily%20show/0/11/0" title="Sorteren op ULed door">ULed door</a></span>, <a href="/search/daily%20show/0/7/0" title="Sorteren op Seeders">SE</a>, <a href="/search/daily%20show/0/9/0" title="Sorteren op Leechers">LE</a>)</div><div class="viewswitch"> View: <a href="/switchview.php?view=s">Single</a> / Double&nbsp;</div></th>
+			<th><abbr title="Seeders"><a href="/search/daily%20show/0/7/0" title="Sorteren op Seeders">SE</a></abbr></th>
+			<th><abbr title="Leechers"><a href="/search/daily%20show/0/9/0" title="Sorteren op Leechers">LE</a></abbr></th>
+		</tr>
+	</thead>
+	<tr>
+		<td class="vertTh">
+			<center>
+				a href="/browse/200" title="Meer van deze categorie">Video</a><br />
+				(<a href="/browse/205" title="Meer van deze categorie">TV-programma's</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/9941509/The_Daily_Show___The_Colbert_Report_-_week_of_2014.04.07_(LQ_.mk" class="detLink" title="Details van The Daily Show + The Colbert Report - week of 2014.04.07 (LQ .mk">The Daily Show + The Colbert Report - week of 2014.04.07 (LQ .mk</a>
+</div>
+<a href="magnet:?xt=urn:btih:1df7d3b10638e852a0d98c31a61d0b34eaa140aa&dn=The+Daily+Show+%2B+The+Colbert+Report+-+week+of+2014.04.07+%28LQ+.mk&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><img src="/static/img/11x11p.png" /><img src="/static/img/11x11p.png" />
+			<font class="detDesc">Geupload 04-11&nbsp;22:45, Grootte 514.45&nbsp;MiB, ULed door <a class="detDesc" href="/user/kingoearthworms/" title="Browse kingoearthworms">kingoearthworms</a></font>
+		</td>
+		<td align="right">28</td>
+		<td align="right">7</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="Meer van deze categorie">Video</a><br />
+				(<a href="/browse/208" title="Meer van deze categorie">HD - TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/9945568/The.Daily.Show.2014.04.10.Jennifer.Garner.720p.HDTV.x264-SWOLLED" class="detLink" title="Details van The.Daily.Show.2014.04.10.Jennifer.Garner.720p.HDTV.x264-SWOLLED">The.Daily.Show.2014.04.10.Jennifer.Garner.720p.HDTV.x264-SWOLLED</a>
+</div>
+<a href="magnet:?xt=urn:btih:57adfe480578684c08d6f2ce1af706939ac6b5aa&dn=The.Daily.Show.2014.04.10.Jennifer.Garner.720p.HDTV.x264-SWOLLED&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a>			<a href="//piratebaytorrents.info/9945568/The.Daily.Show.2014.04.10.Jennifer.Garner.720p.HDTV.x264-SWOLLED.9945568.TPB.torrent" title="Download deze torrent"><img src="/static/img/dl.gif" class="dl" alt="Download" /></a><a href="/user/sceneline"><img src="/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="/static/img/11x11p.png" />
+			<font class="detDesc">Geupload 04-12&nbsp;13:01, Grootte 481.31&nbsp;MiB, ULed door <a class="detDesc" href="/user/sceneline/" title="Browse sceneline">sceneline</a></font>
+		</td>
+		<td align="right">1</td>
+		<td align="right">1</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="Meer van deze categorie">Video</a><br />
+				(<a href="/browse/205" title="Meer van deze categorie">TV-programma's</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/9943110/The_Daily_Show_2014_04_10_Jennifer_Garner_HDTV_x264-SWOLLED_[ezt" class="detLink" title="Details van The Daily Show 2014 04 10 Jennifer Garner HDTV x264-SWOLLED [ezt">The Daily Show 2014 04 10 Jennifer Garner HDTV x264-SWOLLED [ezt</a>
+</div>
+<a href="magnet:?xt=urn:btih:df78f547155186ef87c472f27490370d2d5010b2&dn=The+Daily+Show+2014+04+10+Jennifer+Garner+HDTV+x264-SWOLLED+%5Bezt&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="/user/eztv"><img src="/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="/static/img/11x11p.png" />
+			<font class="detDesc">Geupload 04-12&nbsp;05:17, Grootte 155.87&nbsp;MiB, ULed door <a class="detDesc" href="/user/eztv/" title="Browse eztv">eztv</a></font>
+		</td>
+		<td align="right">410</td>
+		<td align="right">11</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="Meer van deze categorie">Video</a><br />
+				(<a href="/browse/205" title="Meer van deze categorie">TV-programma's</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/9938866/The.Daily.Show.2014.04.10.Jennifer.Garner.HDTV.x264-SWOLLED[rart" class="detLink" title="Details van The.Daily.Show.2014.04.10.Jennifer.Garner.HDTV.x264-SWOLLED[rart">The.Daily.Show.2014.04.10.Jennifer.Garner.HDTV.x264-SWOLLED[rart</a>
+</div>
+<a href="magnet:?xt=urn:btih:42964658ac899833abd5390efe33590e1fa61932&dn=The.Daily.Show.2014.04.10.Jennifer.Garner.HDTV.x264-SWOLLED%5Brart&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="/user/Drarbg"><img src="/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="/static/img/11x11p.png" />
+			<font class="detDesc">Geupload 04-11&nbsp;05:52, Grootte 155.87&nbsp;MiB, ULed door <a class="detDesc" href="/user/Drarbg/" title="Browse Drarbg">Drarbg</a></font>
+		</td>
+		<td align="right">56</td>
+		<td align="right">1</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="Meer van deze categorie">Video</a><br />
+				(<a href="/browse/208" title="Meer van deze categorie">HD - TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/9938864/The.Daily.Show.2014.04.10.Jennifer.Garner.720p.HDTV.x264-SWOLLED" class="detLink" title="Details van The.Daily.Show.2014.04.10.Jennifer.Garner.720p.HDTV.x264-SWOLLED">The.Daily.Show.2014.04.10.Jennifer.Garner.720p.HDTV.x264-SWOLLED</a>
+</div>
+<a href="magnet:?xt=urn:btih:c29b497212866c22d956f30cb38165179e491034&dn=The.Daily.Show.2014.04.10.Jennifer.Garner.720p.HDTV.x264-SWOLLED&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="/user/Drarbg"><img src="/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="/static/img/11x11p.png" />
+			<font class="detDesc">Geupload 04-11&nbsp;05:49, Grootte 481.31&nbsp;MiB, ULed door <a class="detDesc" href="/user/Drarbg/" title="Browse Drarbg">Drarbg</a></font>
+		</td>
+		<td align="right">42</td>
+		<td align="right">5</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="Meer van deze categorie">Video</a><br />
+				(<a href="/browse/208" title="Meer van deze categorie">HD - TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/9931570/The.Daily.Show.2014.04.09.Colin.Firth.720p.HDTV.x264-SWOLLED[rar" class="detLink" title="Details van The.Daily.Show.2014.04.09.Colin.Firth.720p.HDTV.x264-SWOLLED[rar">The.Daily.Show.2014.04.09.Colin.Firth.720p.HDTV.x264-SWOLLED[rar</a>
+</div>
+<a href="magnet:?xt=urn:btih:e65d5c4afd480ecf5031f8dcab85d64d77ca75bf&dn=The.Daily.Show.2014.04.09.Colin.Firth.720p.HDTV.x264-SWOLLED%5Brar&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="/user/Drarbg"><img src="/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="/static/img/11x11p.png" />
+			<font class="detDesc">Geupload 04-10&nbsp;05:49, Grootte 501.76&nbsp;MiB, ULed door <a class="detDesc" href="/user/Drarbg/" title="Browse Drarbg">Drarbg</a></font>
+		</td>
+		<td align="right">42</td>
+		<td align="right">1</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="Meer van deze categorie">Video</a><br />
+				(<a href="/browse/205" title="Meer van deze categorie">TV-programma's</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/9931565/The.Daily.Show.2014.04.09.Colin.Firth.HDTV.x264-SWOLLED[rartv]" class="detLink" title="Details van The.Daily.Show.2014.04.09.Colin.Firth.HDTV.x264-SWOLLED[rartv]">The.Daily.Show.2014.04.09.Colin.Firth.HDTV.x264-SWOLLED[rartv]</a>
+</div>
+<a href="magnet:?xt=urn:btih:994c1c0ac43895047ad5bb83c71b0ac8e19c68fc&dn=The.Daily.Show.2014.04.09.Colin.Firth.HDTV.x264-SWOLLED%5Brartv%5D&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="/user/Drarbg"><img src="/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="/static/img/11x11p.png" />
+			<font class="detDesc">Geupload 04-10&nbsp;05:47, Grootte 160.02&nbsp;MiB, ULed door <a class="detDesc" href="/user/Drarbg/" title="Browse Drarbg">Drarbg</a></font>
+		</td>
+		<td align="right">23</td>
+		<td align="right">3</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="Meer van deze categorie">Video</a><br />
+				(<a href="/browse/208" title="Meer van deze categorie">HD - TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/9924946/The.Daily.Show.2014.04.08.Denis.Leary.720p.HDTV.x264-CROOKS[rart" class="detLink" title="Details van The.Daily.Show.2014.04.08.Denis.Leary.720p.HDTV.x264-CROOKS[rart">The.Daily.Show.2014.04.08.Denis.Leary.720p.HDTV.x264-CROOKS[rart</a>
+</div>
+<a href="magnet:?xt=urn:btih:19d5be93e24852f7db9b1a0687533398f299d32e&dn=The.Daily.Show.2014.04.08.Denis.Leary.720p.HDTV.x264-CROOKS%5Brart&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="/user/Drarbg"><img src="/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="/static/img/11x11p.png" />
+			<font class="detDesc">Geupload 04-09&nbsp;14:59, Grootte 490.27&nbsp;MiB, ULed door <a class="detDesc" href="/user/Drarbg/" title="Browse Drarbg">Drarbg</a></font>
+		</td>
+		<td align="right">22</td>
+		<td align="right">2</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="Meer van deze categorie">Video</a><br />
+				(<a href="/browse/205" title="Meer van deze categorie">TV-programma's</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/9924430/The.Daily.Show.2014.04.08.Denis.Leary.HDTV.x264-2HD[rartv]" class="detLink" title="Details van The.Daily.Show.2014.04.08.Denis.Leary.HDTV.x264-2HD[rartv]">The.Daily.Show.2014.04.08.Denis.Leary.HDTV.x264-2HD[rartv]</a>
+</div>
+<a href="magnet:?xt=urn:btih:1c4e81230dca453fde2d10c135cbf8c8978d217a&dn=The.Daily.Show.2014.04.08.Denis.Leary.HDTV.x264-2HD%5Brartv%5D&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="/user/Drarbg"><img src="/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="/static/img/11x11p.png" />
+			<font class="detDesc">Geupload 04-09&nbsp;11:24, Grootte 165.25&nbsp;MiB, ULed door <a class="detDesc" href="/user/Drarbg/" title="Browse Drarbg">Drarbg</a></font>
+		</td>
+		<td align="right">74</td>
+		<td align="right">1</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="Meer van deze categorie">Video</a><br />
+				(<a href="/browse/205" title="Meer van deze categorie">TV-programma's</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/9922074/The_Daily_Show_2014_04_07_Matt_Taibbi_(Extended)_WEB-DL" class="detLink" title="Details van The Daily Show 2014 04 07 Matt Taibbi (Extended) WEB-DL">The Daily Show 2014 04 07 Matt Taibbi (Extended) WEB-DL</a>
+</div>
+<a href="magnet:?xt=urn:btih:00c047ac165a7b2b117bed21c37e437ab958e6e5&dn=The+Daily+Show+2014+04+07+Matt+Taibbi+%28Extended%29+WEB-DL&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><img src="/static/img/icon_comment.gif" alt="Deze torrent heeft 2 opmerkingen." title="Deze torrent heeft 2 opmerkingen." /><img src="/static/img/11x11p.png" />
+			<font class="detDesc">Geupload 04-09&nbsp;01:59, Grootte 240.59&nbsp;MiB, ULed door <a class="detDesc" href="/user/KJFinster/" title="Browse KJFinster">KJFinster</a></font>
+		</td>
+		<td align="right">10</td>
+		<td align="right">2</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="Meer van deze categorie">Video</a><br />
+				(<a href="/browse/205" title="Meer van deze categorie">TV-programma's</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/9922071/The_Daily_Show_2014_04_03_Pel_eacute__(Extended)_WEB-DL" class="detLink" title="Details van The Daily Show 2014 04 03 Pel&eacute; (Extended) WEB-DL">The Daily Show 2014 04 03 Pel&eacute; (Extended) WEB-DL</a>
+</div>
+<a href="magnet:?xt=urn:btih:d25c821cc39625801754dbefcb083a79a03f6c6d&dn=The+Daily+Show+2014+04+03+Pel%26eacute%3B+%28Extended%29+WEB-DL&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a>			<a href="//piratebaytorrents.info/9922071/The_Daily_Show_2014_04_03_Pel_eacute__(Extended)_WEB-DL.9922071.TPB.torrent" title="Download deze torrent"><img src="/static/img/dl.gif" class="dl" alt="Download" /></a><img src="/static/img/icon_comment.gif" alt="Deze torrent heeft 1 opmerkingen." title="Deze torrent heeft 1 opmerkingen." /><img src="/static/img/11x11p.png" />
+			<font class="detDesc">Geupload 04-09&nbsp;01:57, Grootte 198.11&nbsp;MiB, ULed door <a class="detDesc" href="/user/KJFinster/" title="Browse KJFinster">KJFinster</a></font>
+		</td>
+		<td align="right">7</td>
+		<td align="right">1</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="Meer van deze categorie">Video</a><br />
+				(<a href="/browse/208" title="Meer van deze categorie">HD - TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/9918103/The.Daily.Show.2014.04.07.Matt.Taibbi.720p.HDTV.x264-CROOKS[rart" class="detLink" title="Details van The.Daily.Show.2014.04.07.Matt.Taibbi.720p.HDTV.x264-CROOKS[rart">The.Daily.Show.2014.04.07.Matt.Taibbi.720p.HDTV.x264-CROOKS[rart</a>
+</div>
+<a href="magnet:?xt=urn:btih:1521aebf677a71343e5397412c7adab126955eac&dn=The.Daily.Show.2014.04.07.Matt.Taibbi.720p.HDTV.x264-CROOKS%5Brart&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><img src="/static/img/icon_comment.gif" alt="Deze torrent heeft 2 opmerkingen." title="Deze torrent heeft 2 opmerkingen." /><a href="/user/Drarbg"><img src="/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a>
+			<font class="detDesc">Geupload 04-08&nbsp;15:24, Grootte 458.07&nbsp;MiB, ULed door <a class="detDesc" href="/user/Drarbg/" title="Browse Drarbg">Drarbg</a></font>
+		</td>
+		<td align="right">36</td>
+		<td align="right">2</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="Meer van deze categorie">Video</a><br />
+				(<a href="/browse/205" title="Meer van deze categorie">TV-programma's</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/9917908/The.Daily.Show.2014.04.07.Matt.Taibbi.HDTV.x264-CROOKS[rartv]" class="detLink" title="Details van The.Daily.Show.2014.04.07.Matt.Taibbi.HDTV.x264-CROOKS[rartv]">The.Daily.Show.2014.04.07.Matt.Taibbi.HDTV.x264-CROOKS[rartv]</a>
+</div>
+<a href="magnet:?xt=urn:btih:d631bb2a6f1a9f6b819f719c2075dddd3b7842a2&dn=The.Daily.Show.2014.04.07.Matt.Taibbi.HDTV.x264-CROOKS%5Brartv%5D&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="/user/Drarbg"><img src="/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="/static/img/11x11p.png" />
+			<font class="detDesc">Geupload 04-08&nbsp;14:31, Grootte 142.52&nbsp;MiB, ULed door <a class="detDesc" href="/user/Drarbg/" title="Browse Drarbg">Drarbg</a></font>
+		</td>
+		<td align="right">16</td>
+		<td align="right">0</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="Meer van deze categorie">Video</a><br />
+				(<a href="/browse/205" title="Meer van deze categorie">TV-programma's</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/9907708/The_Daily_Show___The_Colbert_Report_-_week_of_2014.03.31_(LQ_.mk" class="detLink" title="Details van The Daily Show + The Colbert Report - week of 2014.03.31 (LQ .mk">The Daily Show + The Colbert Report - week of 2014.03.31 (LQ .mk</a>
+</div>
+<a href="magnet:?xt=urn:btih:1a50a73bded29036b27a800ef8a0de1f53fde2f3&dn=The+Daily+Show+%2B+The+Colbert+Report+-+week+of+2014.03.31+%28LQ+.mk&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><img src="/static/img/11x11p.png" /><img src="/static/img/11x11p.png" />
+			<font class="detDesc">Geupload 04-07&nbsp;03:19, Grootte 485.02&nbsp;MiB, ULed door <a class="detDesc" href="/user/kingoearthworms/" title="Browse kingoearthworms">kingoearthworms</a></font>
+		</td>
+		<td align="right">25</td>
+		<td align="right">3</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="Meer van deze categorie">Video</a><br />
+				(<a href="/browse/208" title="Meer van deze categorie">HD - TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/9888809/The.Daily.Show.2014.04.03.Pele.720p.HDTV.x264-BATV[rartv]" class="detLink" title="Details van The.Daily.Show.2014.04.03.Pele.720p.HDTV.x264-BATV[rartv]">The.Daily.Show.2014.04.03.Pele.720p.HDTV.x264-BATV[rartv]</a>
+</div>
+<a href="magnet:?xt=urn:btih:7d2e6e572e3a9e6bf698136290be0e254405d137&dn=The.Daily.Show.2014.04.03.Pele.720p.HDTV.x264-BATV%5Brartv%5D&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a>			<a href="//piratebaytorrents.info/9888809/The.Daily.Show.2014.04.03.Pele.720p.HDTV.x264-BATV[rartv].9888809.TPB.torrent" title="Download deze torrent"><img src="/static/img/dl.gif" class="dl" alt="Download" /></a><a href="/user/Drarbg"><img src="/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="/static/img/11x11p.png" />
+			<font class="detDesc">Geupload 04-04&nbsp;12:59, Grootte 524.57&nbsp;MiB, ULed door <a class="detDesc" href="/user/Drarbg/" title="Browse Drarbg">Drarbg</a></font>
+		</td>
+		<td align="right">9</td>
+		<td align="right">1</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="Meer van deze categorie">Video</a><br />
+				(<a href="/browse/205" title="Meer van deze categorie">TV-programma's</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/9888721/The.Daily.Show.2014.04.03.Pele.HDTV.x264-BATV[rartv]" class="detLink" title="Details van The.Daily.Show.2014.04.03.Pele.HDTV.x264-BATV[rartv]">The.Daily.Show.2014.04.03.Pele.HDTV.x264-BATV[rartv]</a>
+</div>
+<a href="magnet:?xt=urn:btih:bd258468aa1fadd44f9cdfa95afc9021b5998ad2&dn=The.Daily.Show.2014.04.03.Pele.HDTV.x264-BATV%5Brartv%5D&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="/user/Drarbg"><img src="/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="/static/img/11x11p.png" />
+			<font class="detDesc">Geupload 04-04&nbsp;12:23, Grootte 159.03&nbsp;MiB, ULed door <a class="detDesc" href="/user/Drarbg/" title="Browse Drarbg">Drarbg</a></font>
+		</td>
+		<td align="right">41</td>
+		<td align="right">1</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="Meer van deze categorie">Video</a><br />
+				(<a href="/browse/208" title="Meer van deze categorie">HD - TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/9880459/The.Daily.Show.2014.04.02.Samuel.L.Jackson.720p.HDTV.x264-CROOKS" class="detLink" title="Details van The.Daily.Show.2014.04.02.Samuel.L.Jackson.720p.HDTV.x264-CROOKS">The.Daily.Show.2014.04.02.Samuel.L.Jackson.720p.HDTV.x264-CROOKS</a>
+</div>
+<a href="magnet:?xt=urn:btih:d5f26fd23514009129a427b021bda543026e76a4&dn=The.Daily.Show.2014.04.02.Samuel.L.Jackson.720p.HDTV.x264-CROOKS&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="/user/Drarbg"><img src="/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="/static/img/11x11p.png" />
+			<font class="detDesc">Geupload 04-03&nbsp;15:42, Grootte 543.11&nbsp;MiB, ULed door <a class="detDesc" href="/user/Drarbg/" title="Browse Drarbg">Drarbg</a></font>
+		</td>
+		<td align="right">18</td>
+		<td align="right">6</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="Meer van deze categorie">Video</a><br />
+				(<a href="/browse/205" title="Meer van deze categorie">TV-programma's</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/9880059/The.Daily.Show.2014.04.02.Samuel.L.Jackson.HDTV.x264-CROOKS[rart" class="detLink" title="Details van The.Daily.Show.2014.04.02.Samuel.L.Jackson.HDTV.x264-CROOKS[rart">The.Daily.Show.2014.04.02.Samuel.L.Jackson.HDTV.x264-CROOKS[rart</a>
+</div>
+<a href="magnet:?xt=urn:btih:f0f3ad128681c2f1d7ac8b4ae79f644acd7fb7ae&dn=The.Daily.Show.2014.04.02.Samuel.L.Jackson.HDTV.x264-CROOKS%5Brart&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="/user/Drarbg"><img src="/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="/static/img/11x11p.png" />
+			<font class="detDesc">Geupload 04-03&nbsp;14:11, Grootte 170.36&nbsp;MiB, ULed door <a class="detDesc" href="/user/Drarbg/" title="Browse Drarbg">Drarbg</a></font>
+		</td>
+		<td align="right">26</td>
+		<td align="right">1</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="Meer van deze categorie">Video</a><br />
+				(<a href="/browse/205" title="Meer van deze categorie">TV-programma's</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/9877184/The_Daily_Show_2014_04_01_Michael_Lewis_(Extended)_WEB-DL" class="detLink" title="Details van The Daily Show 2014 04 01 Michael Lewis (Extended) WEB-DL">The Daily Show 2014 04 01 Michael Lewis (Extended) WEB-DL</a>
+</div>
+<a href="magnet:?xt=urn:btih:14361664987a3dda98d8b99381753fbf44b5727e&dn=The+Daily+Show+2014+04+01+Michael+Lewis+%28Extended%29+WEB-DL&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><img src="/static/img/11x11p.png" /><img src="/static/img/11x11p.png" />
+			<font class="detDesc">Geupload 04-03&nbsp;01:04, Grootte 253.19&nbsp;MiB, ULed door <a class="detDesc" href="/user/KJFinster/" title="Browse KJFinster">KJFinster</a></font>
+		</td>
+		<td align="right">13</td>
+		<td align="right">0</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="Meer van deze categorie">Video</a><br />
+				(<a href="/browse/208" title="Meer van deze categorie">HD - TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/9873816/The.Daily.Show.2014.04.01.Michael.Lewis.720p.HDTV.x264-CROOKS[ra" class="detLink" title="Details van The.Daily.Show.2014.04.01.Michael.Lewis.720p.HDTV.x264-CROOKS[ra">The.Daily.Show.2014.04.01.Michael.Lewis.720p.HDTV.x264-CROOKS[ra</a>
+</div>
+<a href="magnet:?xt=urn:btih:bfa153964715bef35be574d71a32525ab9d9bb27&dn=The.Daily.Show.2014.04.01.Michael.Lewis.720p.HDTV.x264-CROOKS%5Bra&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="/user/Drarbg"><img src="/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="/static/img/11x11p.png" />
+			<font class="detDesc">Geupload 04-02&nbsp;15:19, Grootte 449.13&nbsp;MiB, ULed door <a class="detDesc" href="/user/Drarbg/" title="Browse Drarbg">Drarbg</a></font>
+		</td>
+		<td align="right">26</td>
+		<td align="right">1</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="Meer van deze categorie">Video</a><br />
+				(<a href="/browse/205" title="Meer van deze categorie">TV-programma's</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/9873325/The.Daily.Show.2014.04.01.Michael.Lewis.HDTV.x264-CROOKS[rartv]" class="detLink" title="Details van The.Daily.Show.2014.04.01.Michael.Lewis.HDTV.x264-CROOKS[rartv]">The.Daily.Show.2014.04.01.Michael.Lewis.HDTV.x264-CROOKS[rartv]</a>
+</div>
+<a href="magnet:?xt=urn:btih:0184c115a64110ddd828e1c3d569f857091281ba&dn=The.Daily.Show.2014.04.01.Michael.Lewis.HDTV.x264-CROOKS%5Brartv%5D&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="/user/Drarbg"><img src="/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="/static/img/11x11p.png" />
+			<font class="detDesc">Geupload 04-02&nbsp;14:11, Grootte 148.65&nbsp;MiB, ULed door <a class="detDesc" href="/user/Drarbg/" title="Browse Drarbg">Drarbg</a></font>
+		</td>
+		<td align="right">51</td>
+		<td align="right">0</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="Meer van deze categorie">Video</a><br />
+				(<a href="/browse/205" title="Meer van deze categorie">TV-programma's</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/9871879/The.Daily.Show.2014.04.01.Michael.Lewis.HDTV.x264.mp4" class="detLink" title="Details van The.Daily.Show.2014.04.01.Michael.Lewis.HDTV.x264.mp4">The.Daily.Show.2014.04.01.Michael.Lewis.HDTV.x264.mp4</a>
+</div>
+<a href="magnet:?xt=urn:btih:c0e7a15f61e3a525ca09ba48b67408daa8cc2f9f&dn=The.Daily.Show.2014.04.01.Michael.Lewis.HDTV.x264.mp4&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><img src="/static/img/icon_comment.gif" alt="Deze torrent heeft 6 opmerkingen." title="Deze torrent heeft 6 opmerkingen." /><img src="/static/img/11x11p.png" />
+			<font class="detDesc">Geupload 04-02&nbsp;06:32, Grootte 148.13&nbsp;MiB, ULed door <a class="detDesc" href="/user/dmband3/" title="Browse dmband3">dmband3</a></font>
+		</td>
+		<td align="right">37</td>
+		<td align="right">0</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="Meer van deze categorie">Video</a><br />
+				(<a href="/browse/208" title="Meer van deze categorie">HD - TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/9871559/The.Daily.Show.2014.03.31.Peter.Dinklage.720p.HDTV.x264-2HD[rart" class="detLink" title="Details van The.Daily.Show.2014.03.31.Peter.Dinklage.720p.HDTV.x264-2HD[rart">The.Daily.Show.2014.03.31.Peter.Dinklage.720p.HDTV.x264-2HD[rart</a>
+</div>
+<a href="magnet:?xt=urn:btih:9ff26b4e2b989f35f2552e6e2cb55f5abe400660&dn=The.Daily.Show.2014.03.31.Peter.Dinklage.720p.HDTV.x264-2HD%5Brart&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a>			<a href="//piratebaytorrents.info/9871559/The.Daily.Show.2014.03.31.Peter.Dinklage.720p.HDTV.x264-2HD[rart.9871559.TPB.torrent" title="Download deze torrent"><img src="/static/img/dl.gif" class="dl" alt="Download" /></a><a href="/user/Drarbg"><img src="/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="/static/img/11x11p.png" />
+			<font class="detDesc">Geupload 04-02&nbsp;05:10, Grootte 439.3&nbsp;MiB, ULed door <a class="detDesc" href="/user/Drarbg/" title="Browse Drarbg">Drarbg</a></font>
+		</td>
+		<td align="right">3</td>
+		<td align="right">0</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="Meer van deze categorie">Video</a><br />
+				(<a href="/browse/205" title="Meer van deze categorie">TV-programma's</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/9871542/The.Daily.Show.2014.03.31.Peter.Dinklage.HDTV.x264-CROOKS[rartv]" class="detLink" title="Details van The.Daily.Show.2014.03.31.Peter.Dinklage.HDTV.x264-CROOKS[rartv]">The.Daily.Show.2014.03.31.Peter.Dinklage.HDTV.x264-CROOKS[rartv]</a>
+</div>
+<a href="magnet:?xt=urn:btih:700c8a92f7de042de26004e3e3e5b7e5ecff5cec&dn=The.Daily.Show.2014.03.31.Peter.Dinklage.HDTV.x264-CROOKS%5Brartv%5D&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a>			<a href="//piratebaytorrents.info/9871542/The.Daily.Show.2014.03.31.Peter.Dinklage.HDTV.x264-CROOKS[rartv].9871542.TPB.torrent" title="Download deze torrent"><img src="/static/img/dl.gif" class="dl" alt="Download" /></a><a href="/user/Drarbg"><img src="/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="/static/img/11x11p.png" />
+			<font class="detDesc">Geupload 04-02&nbsp;05:05, Grootte 153.84&nbsp;MiB, ULed door <a class="detDesc" href="/user/Drarbg/" title="Browse Drarbg">Drarbg</a></font>
+		</td>
+		<td align="right">6</td>
+		<td align="right">1</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="Meer van deze categorie">Video</a><br />
+				(<a href="/browse/205" title="Meer van deze categorie">TV-programma's</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/9849021/The_Daily_Show___The_Colbert_Report_-_week_of_2014.03.24_(LQ_.mk" class="detLink" title="Details van The Daily Show + The Colbert Report - week of 2014.03.24 (LQ .mk">The Daily Show + The Colbert Report - week of 2014.03.24 (LQ .mk</a>
+</div>
+<a href="magnet:?xt=urn:btih:89ff2d96785a422a2a41e63312c19ab33e4f8e29&dn=The+Daily+Show+%2B+The+Colbert+Report+-+week+of+2014.03.24+%28LQ+.mk&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><img src="/static/img/11x11p.png" /><img src="/static/img/11x11p.png" />
+			<font class="detDesc">Geupload 03-29&nbsp;20:20, Grootte 497.27&nbsp;MiB, ULed door <a class="detDesc" href="/user/kingoearthworms/" title="Browse kingoearthworms">kingoearthworms</a></font>
+		</td>
+		<td align="right">11</td>
+		<td align="right">4</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="Meer van deze categorie">Video</a><br />
+				(<a href="/browse/205" title="Meer van deze categorie">TV-programma's</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/9844626/The_Daily_Show_2014_03_27_Nate_Silver_(Extended)_WEB-DL" class="detLink" title="Details van The Daily Show 2014 03 27 Nate Silver (Extended) WEB-DL">The Daily Show 2014 03 27 Nate Silver (Extended) WEB-DL</a>
+</div>
+<a href="magnet:?xt=urn:btih:621d9d938c06f1bc13f8cb6d09316184831cb95a&dn=The+Daily+Show+2014+03+27+Nate+Silver+%28Extended%29+WEB-DL&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a>			<a href="//piratebaytorrents.info/9844626/The_Daily_Show_2014_03_27_Nate_Silver_(Extended)_WEB-DL.9844626.TPB.torrent" title="Download deze torrent"><img src="/static/img/dl.gif" class="dl" alt="Download" /></a><img src="/static/img/11x11p.png" /><img src="/static/img/11x11p.png" />
+			<font class="detDesc">Geupload 03-29&nbsp;00:28, Grootte 263.34&nbsp;MiB, ULed door <a class="detDesc" href="/user/KJFinster/" title="Browse KJFinster">KJFinster</a></font>
+		</td>
+		<td align="right">6</td>
+		<td align="right">0</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="Meer van deze categorie">Video</a><br />
+				(<a href="/browse/208" title="Meer van deze categorie">HD - TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/9842358/The.Daily.Show.2014.03.26.Jude.Law.720p.HDTV.x264-CROOKS[rartv]" class="detLink" title="Details van The.Daily.Show.2014.03.26.Jude.Law.720p.HDTV.x264-CROOKS[rartv]">The.Daily.Show.2014.03.26.Jude.Law.720p.HDTV.x264-CROOKS[rartv]</a>
+</div>
+<a href="magnet:?xt=urn:btih:13c5b74c49fbc161752ff3c559faf4b3ca928c0e&dn=The.Daily.Show.2014.03.26.Jude.Law.720p.HDTV.x264-CROOKS%5Brartv%5D&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a>			<a href="//piratebaytorrents.info/9842358/The.Daily.Show.2014.03.26.Jude.Law.720p.HDTV.x264-CROOKS[rartv].9842358.TPB.torrent" title="Download deze torrent"><img src="/static/img/dl.gif" class="dl" alt="Download" /></a><a href="/user/Drarbg"><img src="/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="/static/img/11x11p.png" />
+			<font class="detDesc">Geupload 03-28&nbsp;11:58, Grootte 436.3&nbsp;MiB, ULed door <a class="detDesc" href="/user/Drarbg/" title="Browse Drarbg">Drarbg</a></font>
+		</td>
+		<td align="right">9</td>
+		<td align="right">1</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="Meer van deze categorie">Video</a><br />
+				(<a href="/browse/208" title="Meer van deze categorie">HD - TV shows</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/9841782/The.Daily.Show.2014.03.27.Nate.Silver.720p.HDTV.x264-DUKES[rartv" class="detLink" title="Details van The.Daily.Show.2014.03.27.Nate.Silver.720p.HDTV.x264-DUKES[rartv">The.Daily.Show.2014.03.27.Nate.Silver.720p.HDTV.x264-DUKES[rartv</a>
+</div>
+<a href="magnet:?xt=urn:btih:9307889fb162c3ffd46f588ce52d7ae536e44f35&dn=The.Daily.Show.2014.03.27.Nate.Silver.720p.HDTV.x264-DUKES%5Brartv&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><a href="/user/Drarbg"><img src="/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a><img src="/static/img/11x11p.png" />
+			<font class="detDesc">Geupload 03-28&nbsp;08:44, Grootte 504.23&nbsp;MiB, ULed door <a class="detDesc" href="/user/Drarbg/" title="Browse Drarbg">Drarbg</a></font>
+		</td>
+		<td align="right">25</td>
+		<td align="right">0</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="Meer van deze categorie">Video</a><br />
+				(<a href="/browse/205" title="Meer van deze categorie">TV-programma's</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/9841695/The.Daily.Show.2014.03.27.Nate.Silver.HDTV.x264-DUKES[rartv]" class="detLink" title="Details van The.Daily.Show.2014.03.27.Nate.Silver.HDTV.x264-DUKES[rartv]">The.Daily.Show.2014.03.27.Nate.Silver.HDTV.x264-DUKES[rartv]</a>
+</div>
+<a href="magnet:?xt=urn:btih:fdb01ef1da00e06d51253008be3f0836520c1730&dn=The.Daily.Show.2014.03.27.Nate.Silver.HDTV.x264-DUKES%5Brartv%5D&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a><img src="/static/img/icon_comment.gif" alt="Deze torrent heeft 1 opmerkingen." title="Deze torrent heeft 1 opmerkingen." /><a href="/user/Drarbg"><img src="/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a>
+			<font class="detDesc">Geupload 03-28&nbsp;08:18, Grootte 179.86&nbsp;MiB, ULed door <a class="detDesc" href="/user/Drarbg/" title="Browse Drarbg">Drarbg</a></font>
+		</td>
+		<td align="right">44</td>
+		<td align="right">0</td>
+	</tr>
+	<tr>
+		<td class="vertTh">
+			<center>
+				<a href="/browse/200" title="Meer van deze categorie">Video</a><br />
+				(<a href="/browse/205" title="Meer van deze categorie">TV-programma's</a>)
+			</center>
+		</td>
+		<td>
+<div class="detName">			<a href="/torrent/9840823/The.Daily.Show.2014.03.26.Jude.Law.HDTV.x264-CROOKS[rartv]" class="detLink" title="Details van The.Daily.Show.2014.03.26.Jude.Law.HDTV.x264-CROOKS[rartv]">The.Daily.Show.2014.03.26.Jude.Law.HDTV.x264-CROOKS[rartv]</a>
+</div>
+<a href="magnet:?xt=urn:btih:a740fe497fe41da2c24531a33e38770a993236be&dn=The.Daily.Show.2014.03.26.Jude.Law.HDTV.x264-CROOKS%5Brartv%5D&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80&tr=udp%3A%2F%2Ftracker.istole.it%3A6969&tr=udp%3A%2F%2Ftracker.ccc.de%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337" title="Download this torrent using magnet"><img src="/static/img/icon-magnet.gif" alt="Magnet link" /></a>			<a href="//piratebaytorrents.info/9840823/The.Daily.Show.2014.03.26.Jude.Law.HDTV.x264-CROOKS[rartv].9840823.TPB.torrent" title="Download deze torrent"><img src="/static/img/dl.gif" class="dl" alt="Download" /></a><img src="/static/img/icon_comment.gif" alt="Deze torrent heeft 1 opmerkingen." title="Deze torrent heeft 1 opmerkingen." /><a href="/user/Drarbg"><img src="/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;" border='0' /></a>
+			<font class="detDesc">Geupload 03-28&nbsp;03:40, Grootte 145.23&nbsp;MiB, ULed door <a class="detDesc" href="/user/Drarbg/" title="Browse Drarbg">Drarbg</a></font>
+		</td>
+		<td align="right">4</td>
+		<td align="right">1</td>
+	</tr>
+
+</table>
+</div>
+<div align="center">1&nbsp;<a href="/search/daily show/1/99/0/">2</a>&nbsp;<a href="/search/daily show/2/99/0/">3</a>&nbsp;<a href="/search/daily show/3/99/0/">4</a>&nbsp;<a href="/search/daily show/4/99/0/">5</a>&nbsp;<a href="/search/daily show/5/99/0/">6</a>&nbsp;<a href="/search/daily show/6/99/0/">7</a>&nbsp;<a href="/search/daily show/7/99/0/">8</a>&nbsp;<a href="/search/daily show/8/99/0/">9</a>&nbsp;<a href="/search/daily show/9/99/0/">10</a>&nbsp;<a href="/search/daily show/10/99/0/">11</a>&nbsp;<a href="/search/daily show/11/99/0/">12</a>&nbsp;<a href="/search/daily show/12/99/0/">13</a>&nbsp;<a href="/search/daily show/13/99/0/">14</a>&nbsp;<a href="/search/daily show/14/99/0/">15</a>&nbsp;<a href="/search/daily show/15/99/0/">16</a>&nbsp;<a href="/search/daily show/16/99/0/">17</a>&nbsp;<a href="/search/daily show/17/99/0/">18</a>&nbsp;<a href="/search/daily show/18/99/0/">19</a>&nbsp;<a href="/search/daily show/19/99/0/">20</a>&nbsp;<a href="/search/daily show/20/99/0/">21</a>&nbsp;<a href="/search/daily show/21/99/0/">22</a>&nbsp;<a href="/search/daily show/22/99/0/">23</a>&nbsp;<a href="/search/daily show/23/99/0/">24</a>&nbsp;<a href="/search/daily show/24/99/0/">25</a>&nbsp;<a href="/search/daily show/25/99/0/">26</a>&nbsp;<a href="/search/daily show/26/99/0/">27</a>&nbsp;<a href="/search/daily show/27/99/0/">28</a>&nbsp;<a href="/search/daily show/28/99/0/">29</a>&nbsp;<a href="/search/daily show/29/99/0/">30</a>&nbsp;<a href="/search/daily show/30/99/0/">31</a>&nbsp;<a href="/search/daily show/31/99/0/">32</a>&nbsp;<a href="/search/daily show/32/99/0/">33</a>&nbsp;<a href="/search/daily show/33/99/0/">34</a>&nbsp;<a href="/search/daily show/1/99/0/"><img src="/static/img/next.gif" border="0" alt="Volgende"/></a>&nbsp;
+</div>
+			<div class="ads" id="sky-banner">
+				 <iframe src="http://cdn1.adexprt.com/exo_na/sky1.html" width="120" height="600" frameborder="0" scrolling="no"></iframe>
+			</div>
+	</div></div></div><!-- //div:content -->
+
+	<div id="foot" style="text-align:center;margin-top:1em;">
+
+			 <iframe src="http://cdn1.adexprt.com/exo_na/bottom.html" width="728" height="90" frameborder="0" scrolling="no"></iframe>
+				<p>
+			<a href="/login" title="Log in">Log in</a> | 
+			<a href="/register" title="Registreer">Registreer</a> | 
+			<a href="/language" title="Selecteer taal">Language / Selecteer taal</a> |
+			<a href="/about" title="Over">Over</a> |
+			<a href="/legal" title="Juridische vraagstukken">Juridische vraagstukken</a> |
+			<a href="/blog" title="Blog">Blog</a>
+			<br />
+			<a href="/contact" title="Neem contact op">Neem contact op</a> |
+			<a href="/policy" title="Gebruikersvoorwaarden">Gebruikersvoorwaarden</a> |
+			<a href="/downloads" title="Downloads">Downloads</a> |
+			<a href="http://www.promobay.org/" title="Promo" target="_NEW">Promo</a> |
+			<a href="/doodles" title="Doodles">Doodles</a> |
+			<a href="/tags" title="Tag Cloud">Tag Cloud</a> |
+			<a href="http://suprbay.org/" title="Forum" target="_blank">Forum</a> |
+			<a href="http://piratebrowser.com/" title="PirateBrowser" target="_blank"><strong>PirateBrowser</strong></a>
+			<br />
+			<a href="http://bayfiles.net" title="Bayfiles" target="_blank">Bayfiles</a> |
+			<a href="http://bayimg.com" title="BayImg" target="_blank">BayImg</a> |
+			<a href="http://pastebay.net" title="PasteBay" target="_blank">PasteBay</a> |
+			<a href="http://scenerelease.org" title="Proxy" target="_blank">Proxy</a> |
+			<!-- <a href="https://twitter.com/tpbdotorg" title="Twitter" target="_blank">Follow TPB on Twitter</a> | -->
+			<a href="https://www.facebook.com/ThePirateBayWarMachine" title="Facebook" target="_blank">Follow TPB on Facebook</a>
+			<br />
+		</p>
+
+<p id="footer" style="color:#666; font-size:0.9em; ">
+        6.586.390 geregistreerde gebruikers. Laatste update 10:40:04.<br />
+        34.457.083 peers (25.263.143 seeders + 9.193.940 leechers) in 5.413.004 torrents.<br />
+</p>
+<br /><a href="http://bitcoin.org" target="_NEW">BitCoin</a>: <b><a href="bitcoin:1KeBs4HBQzkdHC2ou3gpyGHqcL7aKzwTve">1KeBs4HBQzkdHC2ou3gpyGHqcL7aKzwTve</a></b><br /><a href="http://litecoin.org" target="_NEW">LiteCoin</a>: <a href="litecoin:LiYp3Dg11N5BgV8qKW42ubSZXFmjDByjoV">LiYp3Dg11N5BgV8qKW42ubSZXFmjDByjoV</a><br /><br />
+
+		<div id="fbanners">
+			<a href="/rss" class="rss" title="RSS"><img src="/static/img/rss_small.gif" alt="RSS" /></a>
+		</div><!-- // div:fbanners -->
+	</div><!-- // div:foot -->
+
+<script>
+var _wm_settings = {
+	popunder: {
+		url: 			'http:\/\/0427d7.se\/?placement=289748&redirect',
+    times: 		1,
+    hours: 		12.000000,
+    cookie: 	'tpbpop',
+    fastbind:	true
+	}
+};
+var _wm={initialize:function(){this.ua.initialize()},array:{sort:function(a,b,c){a=a.sort();if(b)a=a.reverse();if(c){for(var i=0;i<a.length;i++){var d=a[i];if(Object.prototype.toString.call(d)==='[object Object]')d=_wm.object.sort(d,b,true);else if(Object.prototype.toString.call(d)==='[object Array]')d=_wm.array.sort(d,b,true);a[i]=d}}return a}},object:{keys:function(a){var hasOwnProperty=Object.prototype.hasOwnProperty,hasDontEnumBug=!({toString:null}).propertyIsEnumerable('toString'),dontEnums=['toString','toLocaleString','valueOf','hasOwnProperty','isPrototypeOf','propertyIsEnumerable','constructor'],dontEnumsLength=dontEnums.length;var b=[];if(typeof a!=='object'&&typeof a!=='function'||a===null)return b;for(var c in a){if(hasOwnProperty.call(a,c))b.push(c)}if(hasDontEnumBug){for(var i=0;i<dontEnumsLength;i++){if(hasOwnProperty.call(a,dontEnums[i]))b.push(dontEnums[i])}}return b},sort:function(a,c,d){var e=_wm.array.sort(_wm.object.keys(a));if(c)e=e.reverse();var b={};for(var i=0;i<e.length;i++){var f=a[e[i]];if(d){if(Object.prototype.toString.call(f)==='[object Object]')f=_wm.object.sort(f,c,true);else if(Object.prototype.toString.call(f)==='[object Array]')f=_wm.array.sort(f,c,true)}b[e[i]]=f}return b},iterator:function(b){this.element=b;this.element_array=_wm.object.keys(b);this.current_index=0;this.hasNext=function(){return this.current_index<=this.element_array.length-1};this.next=function(){if(this.hasNext()){var a=[this.element_array[this.current_index],this.element[this.element_array[this.current_index]]];this.current_index++;return a}return false}}},ua:{initialize:function(){this.maps={browser:{oldsafari:{major:{'1':['/8','/1','/3'],'2':'/4','?':'/'},version:{'1.0':'/8','1.2':'/1','1.3':'/3','2.0':'/412','2.0.2':'/416','2.0.3':'/417','2.0.4':'/419','?':'/'}}},os:{windows:{version:{'ME':'4.90','NT 3.11':'NT3.51','NT 4.0':'NT4.0','2000':'NT 5.0','XP':['NT 5.1','NT 5.2'],'Vista':'NT 6.0','7':'NT 6.1','8':'NT 6.2','8.1':'NT 6.3','RT':'ARM'}}}};this.regexes={browser:[[/(opera\smini)\/((\d+)?[\w\.-]+)/i,/(opera\s[mobiletab]+).+version\/((\d+)?[\w\.-]+)/i,/(opera).+version\/((\d+)?[\w\.]+)/i,/(opera)[\/\s]+((\d+)?[\w\.]+)/i],['name','version','major'],[/\s(opr)\/((\d+)?[\w\.]+)/i],[['name','Opera'],'version','major'],[/(kindle)\/((\d+)?[\w\.]+)/i,/(lunascape|maxthon|netfront|jasmine|blazer)[\/\s]?((\d+)?[\w\.]+)*/i,/(avant\s|iemobile|slim|baidu)(?:browser)?[\/\s]?((\d+)?[\w\.]*)/i,/(?:ms|\()(ie)\s((\d+)?[\w\.]+)/i,/(rekonq)((?:\/)[\w\.]+)*/i,/(chromium|flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron)\/((\d+)?[\w\.-]+)/i],['name','version','major'],[/(trident).+rv[:\s]((\d+)?[\w\.]+).+like\sgecko/i],[['name','IE'],'version','major'],[/(yabrowser)\/((\d+)?[\w\.]+)/i],[['name','Yandex'],'version','major'],[/(comodo_dragon)\/((\d+)?[\w\.]+)/i],[['name',/_/g,' '],'version','major'],[/(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?((\d+)?[\w\.]+)/i],['name','version','major'],[/(dolfin)\/((\d+)?[\w\.]+)/i],[['name','Dolphin'],'version','major'],[/((?:android.+)crmo|crios)\/((\d+)?[\w\.]+)/i],[['name','Chrome'],'version','major'],[/version\/((\d+)?[\w\.]+).+?mobile\/\w+\s(safari)/i],['version','major',['name','Mobile Safari']],[/version\/((\d+)?[\w\.]+).+?(mobile\s?safari|safari)/i],['version','major','name'],[/webkit.+?(mobile\s?safari|safari)((\/[\w\.]+))/i],['name',['major',_wm.ua.mapper.str,_wm.ua.maps.browser.oldsafari.major],['version',_wm.ua.mapper.str,_wm.ua.maps.browser.oldsafari.version]],[/(konqueror)\/((\d+)?[\w\.]+)/i,/(webkit|khtml)\/((\d+)?[\w\.]+)/i],['name','version','major'],[/(navigator|netscape)\/((\d+)?[\w\.-]+)/i],[['name','Netscape'],'version','major'],[/(swiftfox)/i,/(icedragon|iceweasel|camino|chimera|fennec|maemo\sbrowser|minimo|conkeror)[\/\s]?((\d+)?[\w\.\+]+)/i,/(firefox|seamonkey|k-meleon|icecat|iceape|firebird|phoenix)\/((\d+)?[\w\.-]+)/i,/(mozilla)\/((\d+)?[\w\.]+).+rv\:.+gecko\/\d+/i,/(uc\s?browser|polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf|qqbrowser)[\/\s]?((\d+)?[\w\.]+)/i,/(links)\s\(((\d+)?[\w\.]+)/i,/(gobrowser)\/?((\d+)?[\w\.]+)*/i,/(ice\s?browser)\/v?((\d+)
+</script>
+<script type="text/javascript" src="/static/js/poptest.js"></script></body>
+</html>
