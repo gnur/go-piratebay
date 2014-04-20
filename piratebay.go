@@ -1,4 +1,4 @@
-package main
+package gopiratebay
 
 import (
     "code.google.com/p/go.net/html"
@@ -16,7 +16,7 @@ type Torrent struct {
     leechers int
 }
 
-func main() {
+func Search() {
     resp, err := http.Get("http://pong.erwin.io/tpb.html")
     if err != nil {
         fmt.Println("helaas, mislukt")
