@@ -2,11 +2,12 @@ package main
 
 import ( 
     "github.com/gnur/gopiratebay"
+	"fmt"
     )
 
 func main() {
     err, torrents := gopiratebay.Search()
-	for tor := range torrents {
-		fmt.Println(tor.magnetlink)
+	for _, tor := range torrents {
+		fmt.Println(tor.Magnetlink)
 	}
 }

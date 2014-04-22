@@ -7,13 +7,13 @@ import (
     )
 
 type Torrent struct {
-    title string
-    magnetlink string
+    Title string
+    Magnetlink string
     //created date
-    size int
-    user string
-    seeders int
-    leechers int
+    Size int
+    User string
+    Seeders int
+    Leechers int
 }
 
 func Search() (error, []Torrent) {
@@ -67,12 +67,12 @@ func getTorrent(n *html.Node, t *Torrent) error {
     if n.Type == html.ElementNode && n.Data == "a" {
         for _, a := range n.Attr {
             if a.Key == "href" && a.Val[:6] == "magnet" {
-                t.magnetlink = a.Val
+                t.Magnetlink = a.Val
             }
             if a.Key == "href" && a.Val[:9] == "/torrent/" {
                 for a := n.FirstChild; a != nil; a = a.NextSibling {
-                    if a.Type == html.TextNode && t.title == "" {
-                        t.title = a.Data
+                    if a.Type == html.TextNode && t.Title == "" {
+                        t.Title = a.Data
                     }
                 }
             }
