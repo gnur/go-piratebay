@@ -16,27 +16,28 @@ type Torrent struct {
     leechers int
 }
 
-func Search() {
+func Search() (error, []Torrent) {
     resp, err := http.Get("http://pong.erwin.io/tpb.html")
     if err != nil {
         fmt.Println("helaas, mislukt")
-        return
+        return err, nil
     }
     doc, err := html.Parse(resp.Body)
     if err != nil {
         fmt.Println("parse mislukt")
-        return
+        return err, nil
     }
     torrentsChannel := make(chan Torrent)
-    go torrentReceiver(torrentsChannel)
+	torrents := make([]Torrent, 0)
+    go torrentReceiver(torrentsChannel, torrents)
     loopdom(doc, torrentsChannel)
+	close(torrentsChannel)
+	return nil, torrents
 }
 
-func torrentReceiver(torCh chan Torrent) {
+func torrentReceiver(torCh chan Torrent, torrents []Torrent) {
     for tor := range torCh {
-        fmt.Println("-------------------------")
-        fmt.Println(tor.magnetlink)
-        fmt.Println(tor.title)
+		torrents = append(torrents, tor)
     }
 }
 
