@@ -7,7 +7,6 @@ import (
 	"strings"
 
 	"golang.org/x/net/html"
-
 )
 
 // Category is the type of torrent to search for.
@@ -67,6 +66,7 @@ func Search(query string, cats ...Category) ([]Torrent, error) {
 	if err != nil {
 		return nil, err
 	}
+	defer resp.Body.Close()
 	doc, err := html.Parse(resp.Body)
 	if err != nil {
 		return nil, err
