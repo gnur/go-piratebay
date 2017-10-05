@@ -5,14 +5,16 @@ import (
 )
 
 func TestSearchCount(t *testing.T) {
-	torrents, _ := Search("go lang piratebay")
+	pb := New("https://thehiddenbay.info")
+	torrents, _ := pb.Search("go lang piratebay")
 	if len(torrents) != 1 {
 		t.Error("Expected 1 result, got ", len(torrents))
 	}
 }
 
 func TestSearchFields(t *testing.T) {
-	torrents, _ := Search("go lang piratebay")
+	pb := New("https://thehiddenbay.info")
+	torrents, _ := pb.Search("go lang piratebay")
 	testTor := torrents[0]
 	if testTor.Title != "Go lang piratebay api" {
 		t.Error("Title should be: Go lang piratebay api, but it is:", testTor.Title)

@@ -41,8 +41,19 @@ type Torrent struct {
 	DetailsLink string
 }
 
+type Piratebay struct {
+	Url string
+}
+
+func New(url string) Piratebay {
+	return Piratebay{
+		Url: url,
+	}
+}
+
+
 // Search returns the torrents found with the given search string and categories.
-func Search(query string, cats ...Category) ([]Torrent, error) {
+func (p Piratebay) Search(query string, cats ...Category) ([]Torrent, error) {
 	if len(cats) == 0 {
 		cats = []Category{0}
 	}
@@ -58,7 +69,7 @@ func Search(query string, cats ...Category) ([]Torrent, error) {
 		catStr = "0"
 	}
 	resp, err := http.Get(
-		pirateURL +
+		p.Url +
 			"/search/" +
 			url.QueryEscape(query) +
 			"/0/99/" +
